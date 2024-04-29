@@ -56,4 +56,4 @@ body:
         - label: "Yes, I have checked for similar issues."
   - type: markdown
     attributes:
-      value: "Thank you for submitting your issue report! Please be patient while we work on a resolution."
+      value: "Thank you for submitting your issue report! Please be patient while I work on a resolution."

@@ -5,7 +5,7 @@
 <p align="center">
     <a href="https://modrinth.com/mod/lets-do-bakery"><img src="./.github/assets/bakery.png" height="55" /></a>   
     <a href="https://modrinth.com/mod/lets-do-brewery"><img src="./.github/assets/brewery.png" height="55" /></a>   
-    <a href="https://modrinth.com/mod/vinery"><img src="./.github/assets/vinery.png" height="55" /></a>
+    <a href="https://modrinth.com/mod/lets-do-vinery"><img src="./.github/assets/vinery.png" height="55" /></a>
 </p>
 <p align="center">
     <a href="https://modrinth.com/mod/lets-do-bloomingnature"><img src="./.github/assets/bloomingnature.png" height="55" /></a>   
