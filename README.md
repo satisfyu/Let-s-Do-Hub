@@ -1,7 +1,7 @@
 <p align="center">
     <img src="./.github/assets/logo.png" height="200" />
 </p>
-<h1 align="center">Download our mods</h1>
+
 <p align="center">
     <a href="https://modrinth.com/mod/lets-do-bakery"><img src="./.github/assets/bakery.png" height="55" /></a>   
     <a href="https://modrinth.com/mod/lets-do-brewery"><img src="./.github/assets/brewery.png" height="55" /></a>   
