@@ -1,12 +1,13 @@
 name: Issue Report
-description: Submit an issue report using this form.
+description: Use this form to report an issue.
+
 body:
   - type: markdown
     attributes:
-      value: "I understand that encountering bugs can be frustrating, but please remember that they are not introduced intentionally. I strive to make the mods as error-free as possible. Please avoid insults, passive aggressiveness, or any negative behavior while filling out this form."
+      value: "Thank you for taking the time to report an issue. Please remember, bugs are unintentional and your understanding is appreciated. Maintain a respectful tone throughout."
   - type: markdown
     attributes:
-      value: "Please describe your issue in detail."
+      value: "Detail your issue below."
   - type: input
     id: minecraft_version
     attributes:
@@ -14,46 +15,62 @@ body:
       placeholder: "e.g., 1.20.1"
     validations:
       required: true
-  - type: input
+  - type: dropdown
     id: mod
     attributes:
-      label: Mod Name and Version
-      placeholder: "e.g., Vinery, 2.0.0"
+      label: Mod
+      description: "Choose the mod related to the issue."
+      options:
+        - "Vinery"
+        - "NetherVinery"
+        - "Meadow"
+        - "Bakery"
+        - "Candlelight"
+        - "HerbalBrews"
+        - "BloomingNature"
+        - "Farm and Charm"
+        - "Brewery"
+        - "Beachparty"
+    validations:
+      required: true
+  - type: input
+    id: mod_version
+    attributes:
+      label: Mod Version
+      placeholder: "e.g., Vinery 2.0.0"
     validations:
       required: true
   - type: textarea
     id: description
     attributes:
       label: Issue Description
-      description: "Provide a detailed description of the issue."
+      description: "Provide a comprehensive description of the issue."
     validations:
       required: true
   - type: textarea
     id: reproduction_steps
     attributes:
       label: Steps to Reproduce
-      description: "List the steps needed to reproduce the issue."
+      description: "Enumerate the steps needed to replicate the issue."
     validations:
       required: true
   - type: textarea
     id: logs
     attributes:
       label: Logs
-      description: "Please upload logs from your launcher using sites like https://pastebin.com/"
+      description: "Upload logs via https://pastebin.com/ and provide the link here."
   - type: checkboxes
     id: has_tested_minimal_instance
     attributes:
       label: Minimal Instance Test
-      description: "Have you tested the issue with only the mod in question and related mods?"
+      description: "Check if the issue persists with only this mod and its dependencies active."
       options:
-        - label: "Yes, I've tested this on a minimal instance."
+        - label: "Yes, I've tested on a minimal instance."
   - type: checkboxes
     id: has_checked_for_similar_issues
     attributes:
       label: Check for Similar Issues
-      description: "To help reduce our workload, please check if there is already a report for your issue."
+      description: "Please verify if a similar issue has already been reported."
       options:
         - label: "Yes, I have checked for similar issues."
-  - type: markdown
-    attributes:
-      value: "Thank you for submitting your issue report! Please be patient while I work on a resolution."
+
