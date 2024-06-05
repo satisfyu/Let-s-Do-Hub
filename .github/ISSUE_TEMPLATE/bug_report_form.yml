@@ -40,6 +40,13 @@ body:
       placeholder: "e.g., 1.3.14"
     validations:
       required: true
+  - type: checkboxes
+    id: using_the_latest_version
+    attributes:
+      label: Using
+      description: "Are you using the latest version of the respective mod for the corresponding Minecraft version?  Please note that older versions are no longer actively supported."
+      options:
+        - label: "Yes. I'm using the latest Version."
   - type: textarea
     id: description
     attributes:
