@@ -7,7 +7,8 @@ body:
       value: "Thank you for taking the time to report an issue. Please remember, bugs are unintentional and your understanding is appreciated. Maintain a respectful tone throughout."
   - type: markdown
     attributes:
-      value: "Detail your issue below."
+      value: "Detail your issue below. 
+      Please Note: This report form is intended for reporting issues and is not for general questions or assistance with uncertainties. For that, the wikis and Discord are available"
   - type: input
     id: minecraft_version
     attributes:
@@ -31,6 +32,8 @@ body:
         - "Farm and Charm"
         - "Brewery"
         - "Beachparty"
+        - "Camping"
+        - "Furniture"
     validations:
       required: true
   - type: input
@@ -44,9 +47,10 @@ body:
     id: using_the_latest_version
     attributes:
       label: Latest Version
-      description: "Are you using the latest version of the respective mod for the corresponding Minecraft version?  Please note that older versions are no longer actively supported."
+      description: "Are you using the latest version of the respective mod for the corresponding Minecraft version? Please note that older versions are no longer actively supported."
       options:
         - label: "Yes. I'm using the latest Version."
+          required: true
   - type: textarea
     id: description
     attributes:
@@ -80,4 +84,5 @@ body:
       description: "Please verify if a similar issue has already been reported."
       options:
         - label: "Yes, I have checked for similar issues."
+          required: true
 
