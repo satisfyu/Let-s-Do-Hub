@@ -1,5 +1,10 @@
-name: Issue Report
-description: Use this form to report an issue.
+name: "Issue Report [{{ mod }}]"
+description: "Use this form to report an issue."
+
+labels:
+  - "{{ mod }}"
+  - "{{#if (eq mod 'bug')}}bug{{/if}}"
+  - "{{#if (eq mod 'suggestion')}}suggestion{{/if}}"
 
 body:
   - type: markdown
@@ -8,18 +13,18 @@ body:
   - type: markdown
     attributes:
       value: "Detail your issue below. 
-      Please Note: This report form is intended for reporting issues and is not for general questions or assistance with uncertainties. For that, the wikis and Discord are available"
+      Please Note: This report form is intended for reporting issues and is not for general questions or assistance with uncertainties. For that, the wikis and Discord are available."
   - type: input
     id: minecraft_version
     attributes:
-      label: Minecraft Version
+      label: "Minecraft Version"
       placeholder: "e.g., 1.20.1"
     validations:
       required: true
   - type: dropdown
     id: mod
     attributes:
-      label: Mod
+      label: "Mod"
       description: "Choose the mod related to the issue."
       options:
         - "Vinery"
@@ -39,14 +44,14 @@ body:
   - type: input
     id: mod_version
     attributes:
-      label: Mod Version
+      label: "Mod Version"
       placeholder: "e.g., 1.3.14"
     validations:
       required: true
   - type: checkboxes
     id: using_the_latest_version
     attributes:
-      label: Latest Version
+      label: "Latest Version"
       description: "Are you using the latest version of the respective mod for the corresponding Minecraft version? Please note that older versions are no longer actively supported."
       options:
         - label: "Yes. I'm using the latest Version."
@@ -54,35 +59,34 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Issue Description
+      label: "Issue Description"
       description: "Provide a comprehensive description of the issue."
     validations:
       required: true
   - type: textarea
     id: reproduction_steps
     attributes:
-      label: Steps to Reproduce
+      label: "Steps to Reproduce"
       description: "Enumerate the steps needed to replicate the issue."
     validations:
       required: true
   - type: textarea
     id: logs
     attributes:
-      label: Logs
+      label: "Logs"
       description: "Upload logs via https://pastebin.com/ and provide the link here."
   - type: checkboxes
     id: has_tested_minimal_instance
     attributes:
-      label: Minimal Instance Test
+      label: "Minimal Instance Test"
       description: "Check if the issue persists with only this mod and its dependencies active."
       options:
         - label: "Yes, I've tested on a minimal instance."
   - type: checkboxes
     id: has_checked_for_similar_issues
     attributes:
-      label: Check for Similar Issues
+      label: "Check for Similar Issues"
       description: "Please verify if a similar issue has already been reported."
       options:
         - label: "Yes, I have checked for similar issues."
           required: true
-

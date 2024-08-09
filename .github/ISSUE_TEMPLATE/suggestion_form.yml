@@ -1,5 +1,10 @@
-name: Suggestion
-description: Suggest an improvement using this form.
+name: "Suggestion [{{ mod }}]"
+description: "Suggest an improvement using this form."
+
+labels:
+  - "{{ mod }}"
+  - "suggestion"
+
 body:
   - type: markdown
     attributes:
@@ -7,33 +12,33 @@ body:
   - type: input
     id: mod
     attributes:
-      label: Mod Name and Version
+      label: "Mod Name and Version"
       placeholder: "e.g., Vinery"
     validations:
       required: true
   - type: textarea
     id: suggestion_detail
     attributes:
-      label: Suggestion Details
+      label: "Suggestion Details"
       description: "Tell us more about your suggestion."
     validations:
       required: true
   - type: textarea
     id: expected_benefits
     attributes:
-      label: Expected Benefits
+      label: "Expected Benefits"
       description: "What benefits do you think your suggestion will bring?"
     validations:
       required: true
   - type: textarea
     id: potential_drawbacks
     attributes:
-      label: Potential Drawbacks
+      label: "Potential Drawbacks"
       description: "Any downsides to your idea?"
   - type: checkboxes
     id: has_checked_for_similar_suggestions
     attributes:
-      label: Check for Similar Suggestions
+      label: "Check for Similar Suggestions"
       description: "Have you looked to see if someone else has suggested something similar?"
       options:
         - label: "Yes, I've looked for similar ideas."
