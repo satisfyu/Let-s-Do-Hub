@@ -1,5 +1,10 @@
-name: "Issue Report"
-description: "Use this form to report an issue. Please include the mod name in the title like this: [ModName] Your Issue Title"
+name: "Issue Report [{{ mod }}]"
+description: "Use this form to report an issue."
+
+labels:
+  - "{{ mod }}"
+  - "{{#if (eq mod 'bug')}}bug{{/if}}"
+  - "{{#if (eq mod 'suggestion')}}suggestion{{/if}}"
 
 body:
   - type: markdown
@@ -7,12 +12,13 @@ body:
       value: "Thank you for taking the time to report an issue. Please remember, bugs are unintentional and your understanding is appreciated. Maintain a respectful tone throughout."
   - type: markdown
     attributes:
-      value: "Please include the mod name in the title like this: [ModName] Your Issue Title"
+      value: "Detail your issue below. 
+      Please Note: This report form is intended for reporting issues and is not for general questions or assistance with uncertainties. For that, the wikis and Discord are available."
   - type: input
-    id: title
+    id: minecraft_version
     attributes:
-      label: "Title"
-      placeholder: "[ModName] Describe your issue"
+      label: "Minecraft Version"
+      placeholder: "e.g., 1.20.1"
     validations:
       required: true
   - type: dropdown
@@ -28,11 +34,59 @@ body:
         - "Candlelight"
         - "HerbalBrews"
         - "BloomingNature"
-        - "WilderNature"
-        - "Farm & Charm"
+        - "Farm and Charm"
         - "Brewery"
         - "Beachparty"
         - "Camping"
         - "Furniture"
     validations:
       required: true
+  - type: input
+    id: mod_version
+    attributes:
+      label: "Mod Version"
+      placeholder: "e.g., 1.3.14"
+    validations:
+      required: true
+  - type: checkboxes
+    id: using_the_latest_version
+    attributes:
+      label: "Latest Version"
+      description: "Are you using the latest version of the respective mod for the corresponding Minecraft version? Please note that older versions are no longer actively supported."
+      options:
+        - label: "Yes. I'm using the latest Version."
+          required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Issue Description"
+      description: "Provide a comprehensive description of the issue."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: "Steps to Reproduce"
+      description: "Enumerate the steps needed to replicate the issue."
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs"
+      description: "Upload logs via https://pastebin.com/ and provide the link here."
+  - type: checkboxes
+    id: has_tested_minimal_instance
+    attributes:
+      label: "Minimal Instance Test"
+      description: "Check if the issue persists with only this mod and its dependencies active."
+      options:
+        - label: "Yes, I've tested on a minimal instance."
+  - type: checkboxes
+    id: has_checked_for_similar_issues
+    attributes:
+      label: "Check for Similar Issues"
+      description: "Please verify if a similar issue has already been reported."
+      options:
+        - label: "Yes, I have checked for similar issues."
+          required: true
