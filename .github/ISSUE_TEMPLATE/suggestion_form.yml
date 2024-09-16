@@ -3,4 +3,40 @@ description: Suggest an improvement using this form.
 body:
   - type: markdown
     attributes:
-      value: "**🛑 Suggestions are currently closed! 🛑**\n\nThank you for your interest in improving our project. However, suggestions cannot be submitted at this time. Please check back later."
+      value: "What's your idea? Please describe it."
+  - type: input
+    id: mod
+    attributes:
+      label: Mod Name and Version
+      placeholder: "e.g., Vinery"
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion_detail
+    attributes:
+      label: Suggestion Details
+      description: "Tell us more about your suggestion."
+    validations:
+      required: true
+  - type: textarea
+    id: expected_benefits
+    attributes:
+      label: Expected Benefits
+      description: "What benefits do you think your suggestion will bring?"
+    validations:
+      required: true
+  - type: textarea
+    id: potential_drawbacks
+    attributes:
+      label: Potential Drawbacks
+      description: "Any downsides to your idea?"
+  - type: checkboxes
+    id: has_checked_for_similar_suggestions
+    attributes:
+      label: Check for Similar Suggestions
+      description: "Have you looked to see if someone else has suggested something similar?"
+      options:
+        - label: "Yes, I've looked for similar ideas."
+  - type: markdown
+    attributes:
+      value: "Thanks for your suggestion! I'll take a look and get back to you soon!"
