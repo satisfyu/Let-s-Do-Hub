@@ -1,6 +1,14 @@
 name: Suggestion
 description: Suggest an improvement using this form.
 body:
+  - type: checkboxes
+    id: currently_not_available
+    attributes:
+      label: "Currently no capacity for new suggestions."
+      description: "Currently, I am unable to accept new suggestions. Please be aware that any new suggestions may be deleted. Sorry for the inconvenience."
+      options:
+        - label: "I understand that my suggestion might be deleted."
+          required: true
   - type: markdown
     attributes:
       value: "What's your idea? Please describe it."
@@ -15,7 +23,7 @@ body:
     id: suggestion_detail
     attributes:
       label: Suggestion Details
-      description: "Tell us more about your suggestion."
+      description: "Tell me more about your suggestion."
     validations:
       required: true
   - type: textarea
@@ -37,6 +45,7 @@ body:
       description: "Have you looked to see if someone else has suggested something similar?"
       options:
         - label: "Yes, I've looked for similar ideas."
+          required: true
   - type: markdown
     attributes:
       value: "Thanks for your suggestion! I'll take a look and get back to you soon!"
