@@ -1,51 +1,54 @@
 name: Suggestion
-description: Suggest an improvement using this form.
+description: Share your idea for future improvements!
 body:
-  - type: checkboxes
-    id: currently_not_available
-    attributes:
-      label: "Currently no capacity for new suggestions."
-      description: "Currently, I am unable to accept new suggestions. Please be aware that any new suggestions may be deleted. Sorry for the inconvenience."
-      options:
-        - label: "I understand that my suggestion might be deleted."
-          required: true
   - type: markdown
     attributes:
-      value: "What's your idea? Please describe it."
+      value: |
+        ### Currently Taking a Break from Suggestions
+        Hi there! Thank you for wanting to share your ideas. 😊  
+        At the moment, I don't have the capacity to review new suggestions. However, I really value your input and hope to revisit this in the future.  
+        Feel free to check back later when suggestions are open again!
+  - type: checkboxes
+    id: understanding
+    attributes:
+      label: "Please confirm:"
+      options:
+        - label: "I understand that suggestions are currently on hold."
+          required: true
   - type: input
     id: mod
     attributes:
       label: Mod Name and Version
       placeholder: "e.g., Vinery"
-    validations:
-      required: true
+      disabled: true
   - type: textarea
     id: suggestion_detail
     attributes:
-      label: Suggestion Details
-      description: "Tell me more about your suggestion."
-    validations:
-      required: true
+      label: Your Suggestion (Currently Disabled)
+      description: "I’m currently not accepting suggestions, but this will reopen soon!"
+      disabled: true
   - type: textarea
     id: expected_benefits
     attributes:
-      label: Expected Benefits
-      description: "What benefits do you think your suggestion will bring?"
-    validations:
-      required: true
+      label: Expected Benefits (Currently Disabled)
+      description: "What benefits would your suggestion bring?"
+      disabled: true
   - type: textarea
     id: potential_drawbacks
     attributes:
-      label: Potential Drawbacks
+      label: Potential Drawbacks (Currently Disabled)
       description: "Any downsides to your idea?"
+      disabled: true
   - type: checkboxes
     id: has_checked_for_similar_suggestions
     attributes:
-      label: Check for Similar Suggestions
-      description: "Have you looked to see if someone else has suggested something similar?"
+      label: Check for Similar Suggestions (Disabled)
       options:
         - label: "Yes, I've looked for similar ideas."
-          required: true
+          required: false
+      disabled: true
   - type: markdown
     attributes:
-      value: "Thanks for your suggestion! I'll take a look and get back to you soon!"
+      value: |
+        Thank you for understanding!  
+        I look forward to hearing your ideas in the future. 💡
