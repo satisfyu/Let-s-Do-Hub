@@ -14,7 +14,8 @@ body:
       label: "Please confirm:"
       options:
         - label: "I understand that suggestions are currently on hold."
-          required: true
+    validations:
+      required: true
   - type: input
     id: mod
     attributes:
@@ -45,7 +46,6 @@ body:
       label: Check for Similar Suggestions (Disabled)
       options:
         - label: "Yes, I've looked for similar ideas."
-          required: false
       disabled: true
   - type: markdown
     attributes:
