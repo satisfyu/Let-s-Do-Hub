@@ -56,7 +56,6 @@ body:
       description: "Are you using the latest version of the respective mod for the corresponding Minecraft version? Please note that older versions are no longer actively supported."
       options:
         - label: "Yes. I'm using the latest Version."
-          required: true
   - type: textarea
     id: description
     attributes:
@@ -92,4 +91,3 @@ body:
       description: "Please verify if a similar issue has already been reported."
       options:
         - label: "Yes, I have checked for similar issues."
-          required: true
