@@ -1,5 +1,6 @@
 name: Suggestion
 description: Share your idea for future improvements!
+
 body:
   - type: markdown
     attributes:
@@ -8,6 +9,7 @@ body:
         Hi there! Thank you for wanting to share your ideas. 😊  
         At the moment, I don't have the capacity to review new suggestions. However, I really value your input and hope to revisit this in the future.  
         Feel free to check back later when suggestions are open again!
+  
   - type: checkboxes
     id: understanding
     attributes:
@@ -16,37 +18,7 @@ body:
         - label: "I understand that suggestions are currently on hold."
     validations:
       required: true
-  - type: input
-    id: mod
-    attributes:
-      label: Mod Name and Version
-      placeholder: "e.g., Vinery"
-      disabled: true
-  - type: textarea
-    id: suggestion_detail
-    attributes:
-      label: Your Suggestion (Currently Disabled)
-      description: "I’m currently not accepting suggestions, but this will reopen soon!"
-      disabled: true
-  - type: textarea
-    id: expected_benefits
-    attributes:
-      label: Expected Benefits (Currently Disabled)
-      description: "What benefits would your suggestion bring?"
-      disabled: true
-  - type: textarea
-    id: potential_drawbacks
-    attributes:
-      label: Potential Drawbacks (Currently Disabled)
-      description: "Any downsides to your idea?"
-      disabled: true
-  - type: checkboxes
-    id: has_checked_for_similar_suggestions
-    attributes:
-      label: Check for Similar Suggestions (Disabled)
-      options:
-        - label: "Yes, I've looked for similar ideas."
-      disabled: true
+  
   - type: markdown
     attributes:
       value: |
