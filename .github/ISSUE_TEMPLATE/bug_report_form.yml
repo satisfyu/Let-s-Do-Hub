@@ -38,7 +38,7 @@ body:
         - "SafariBanquet"
         - "Seasonal Gifts"
         - "WilderNature"
-        - "Lilis Lucky Lures
+        - "Lilis Lucky Lures"
         - "Furniture"
     validations:
       required: true
@@ -76,8 +76,8 @@ body:
     attributes:
       label: Logs
       description: "Upload logs via https://pastebin.com/ and provide the link here."
-        validations:
-      required: true
+      validations:
+        required: true
   - type: checkboxes
     id: has_tested_minimal_instance
     attributes:
@@ -93,4 +93,3 @@ body:
       options:
         - label: "Yes, I have checked for similar issues."
           required: true
-
