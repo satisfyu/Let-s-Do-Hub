@@ -33,6 +33,12 @@ body:
         - "Brewery"
         - "Beachparty"
         - "Camping"
+        - "Harvestfall"
+        - "AppleWood"
+        - "SafariBanquet"
+        - "Seasonal Gifts"
+        - "WilderNature"
+        - "Lilis Lucky Lures
         - "Furniture"
     validations:
       required: true
@@ -70,6 +76,8 @@ body:
     attributes:
       label: Logs
       description: "Upload logs via https://pastebin.com/ and provide the link here."
+        validations:
+      required: true
   - type: checkboxes
     id: has_tested_minimal_instance
     attributes:
