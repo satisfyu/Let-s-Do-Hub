@@ -17,6 +17,14 @@ body:
         ⚠ **Important:** The mod *Camping* is **not** managed here.  
         → Please report issues related to *Camping* here: [Camping Issues](https://github.com/satisfyu/Camping/issues)
   - type: input
+    id: title
+    attributes:
+      label: Issue Title
+      description: "Format: [Modname] Title. Example: [Vinery] Barrel does not open."
+      placeholder: "[Modname] Short issue description"
+    validations:
+      required: true
+  - type: input
     id: minecraft_version
     attributes:
       label: Minecraft Version
