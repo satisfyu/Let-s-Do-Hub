@@ -16,6 +16,7 @@ body:
       value: |
         ⚠ **Important:** The mod *Camping* is **not** managed here.  
         → Please report issues related to *Camping* here: [Camping Issues](https://github.com/satisfyu/Camping/issues)
+        ⚠ **Important:** The mod *NetherVinery* is currently **not** being maintained.  
   - type: input
     id: title
     attributes:
@@ -38,7 +39,6 @@ body:
       description: "Choose the mod related to the issue. ⚠ *Camping is not managed here!*"
       options:
         - "Vinery"
-        - "NetherVinery"
         - "Meadow"
         - "Bakery"
         - "Candlelight"
